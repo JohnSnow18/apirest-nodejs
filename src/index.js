@@ -36,5 +36,5 @@ app.put('/',(request,response)=>{
 
 //Metodo que permite al servidor web escuchar en un puerto especifico
 app.listen(4000, ()=>{
-    console.log('el servidor esta corriendo en http://localhost:4000/')
+    console.log('el servidor esta ejecutando en http://localhost:4000/')
 })
