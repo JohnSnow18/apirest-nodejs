@@ -1,14 +1,1 @@
-[
-    {
-        "nombre" : "Arroz"
-    },
-    {
-        "nombre" : "Azucar"
-    },
-    {
-        "nombre" : "Panela"
-    },
-    {
-        "nombre" : "Chocolate"
-    }
-]
+[{"nombre":"cafe"},{"nombre":"Arina","cantidad_disponible":40},{"nombre":"Papaya","Cantidad_Disponible":25}]
