@@ -12,7 +12,8 @@ app.use(express.json())
 
 
 //rutas
-app.get('/producto/:nombre?', (request, response)=>{
+app.use('/api', require('../src/routes/index.route'))
+/* app.get('/producto/:nombre?', (request, response)=>{
     let productos = JSON.parse(fs.readFileSync('src/db/productos.json', 'utf8'))
     // creamos un arreglo vacio
     let res =  []  
@@ -81,7 +82,7 @@ app.put('/producto/:nombre',(request,response)=>{  //el put es para actualizar u
 
 app.get('/usuario',(request,response)=>{
     response.send('Desde GET Usuario')
-})
+}) */
 
 //Metodo que permite al servidor web escuchar en un puerto especifico
 app.listen(3000, ()=>{
