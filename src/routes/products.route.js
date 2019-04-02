@@ -7,10 +7,13 @@ router.get('/', async (req, res) => {
    /*   const response = await db.select().from('products') */
    const products = db.select().from('products')
    const query = req.query
-   const per_page = (query.per_page || 10) * 1 //mostrar de 10
+   const per_page = (query.per_page || 10) * 1 //registro por pagina
    const page = (query.page || 1) * 1 //per_page que pagina esta navegando
+   const column_order = query.column_order || "name"
+   const type_order = query.type_order || "asc"
 
    products.limit(per_page).offset((page-1)* per_page)
+   products.orderBy(column_order,type_order)
 
    const data = {
       per_page : per_page ,
